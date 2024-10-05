@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
 npx prettier --ignore-unknown --write .
+git add .
