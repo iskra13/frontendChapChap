@@ -1,5 +1,15 @@
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
 
-createRoot(document.getElementById('root')!).render(<App />)
+import { store } from './Store';
+
+import router from './Components/Root/Root.tsx';
+
+import './index.css';
+
+createRoot(document.getElementById('root')!).render(
+  <Provider store={store}>
+    <RouterProvider router={router} fallbackElement={<div>Loading...</div>} />
+  </Provider>
+);
