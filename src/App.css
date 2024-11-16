@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+  --card-b: #fdf0d5;
+  --card-tr: #780000;
+  --card-r: #c1121f;
+  --card-s: #003049;
+  --card-bl: #669bbc;
+}
+
+/* @NODE для блока с общей информацией (напрямую изменить не получится) */
+.ant-popover-inner.ant-popover-inner {
+  background-color: var(--card-bl);
+  margin-top: 50px;
+  border-radius: 0;
+}
