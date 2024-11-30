@@ -4,11 +4,14 @@ import ReactDOMServer from 'react-dom/server';
 import L from 'leaflet';
 import { allCoordinates, radius } from './Coordinate.data';
 import './../../App.css';
+import { useSocketDataStore } from '../../Store';
 
 const Coordinate = () => {
+  const { socketData } = useSocketDataStore((state) => state);
+
   return (
     <>
-      {allCoordinates.map((data, index) => {
+      {socketData.map((data, index) => {
         const center: [number, number] = [parseFloat(data.node_x), parseFloat(data.node_y)];
         const circleColor = data.fire ? 'red' : 'green';
 

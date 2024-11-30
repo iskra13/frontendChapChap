@@ -4,8 +4,11 @@ import { TableOutlined } from '@ant-design/icons';
 import { columns } from './SensorDateDrawer.data';
 import { allCoordinates } from '../../coordinate/Coordinate.data';
 
+import { useSocketDataStore } from '../../../Store';
+
 const SensorDateDrawer = () => {
   const [isTableVisible, setIsTableVisible] = useState(false);
+  const { socketData } = useSocketDataStore((state) => state);
 
   return (
     <>
@@ -22,7 +25,7 @@ const SensorDateDrawer = () => {
         width={1050}
         style={{ background: '#669BBC' }}
       >
-        <Table dataSource={allCoordinates} columns={columns} />
+        <Table dataSource={socketData} columns={columns as any} />
       </Drawer>
     </>
   );
