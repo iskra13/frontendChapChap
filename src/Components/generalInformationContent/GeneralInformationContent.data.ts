@@ -6,11 +6,6 @@ export const informationItems = [
   },
   {
     id: 2,
-    color: 'yellow',
-    text: 'Пожар может возникнуть в течение часа',
-  },
-  {
-    id: 3,
     color: 'green',
     text: 'Низкая вероятность возникновения пожара',
   },
