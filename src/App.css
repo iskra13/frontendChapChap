@@ -20,3 +20,29 @@
   margin-top: 50px;
   border-radius: 0;
 }
+
+div.leaflet-popup {
+  margin-bottom: 35px;
+}
+/* @NODE для тултипа координат */
+div.leaflet-popup-content-wrapper {
+  background-color: var(--card-bl);
+  padding: 20px 0px;
+  border-radius: 0;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: var(--card-bl) !important;
+}
+/* @NODE для "x" тултипа координат */
+div.leaflet-container a.leaflet-popup-close-button {
+  top: 5px;
+  right: 5px;
+  font-size: 28px;
+  color: #000;
+}
+
+.leaflet-popup-content p {
+  margin: 8px 0 !important;
+}
