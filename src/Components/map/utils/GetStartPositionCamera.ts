@@ -1,1 +1,1 @@
-export const getStartPositionCamera = () => [56.811917599928795, 37.30446963387013];
+export const getStartPositionCamera = () => [56.81001917599928795, 37.307496963387013];

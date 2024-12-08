@@ -15,7 +15,7 @@ const Map = () => {
     <div className={styles.map} style={{ height: '100vh' }}>
       <MapContainer
         center={startPosition}
-        zoom={14}
+        zoom={15}
         minZoom={14}
         style={{ height: '100%', width: '100%' }}
       >
