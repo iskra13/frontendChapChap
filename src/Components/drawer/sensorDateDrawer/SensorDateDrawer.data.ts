@@ -15,18 +15,55 @@ export const dataSource = [
 
 export const columns = [
   {
-    title: 'Имя',
-    dataIndex: 'name',
-    key: 'name',
+    title: 'Дата',
+    dataIndex: 'timestamp',
+    key: 'timestamp',
+    align: 'center',
   },
   {
-    title: 'Возраст',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'Широта',
+    dataIndex: 'node_x',
+    key: 'node_x',
+    align: 'center',
+    render: (value: string) => parseFloat(value).toFixed(2),
   },
   {
-    title: 'Адрес',
-    dataIndex: 'address',
-    key: 'address',
+    title: 'Долгота',
+    dataIndex: 'node_y',
+    key: 'node_y',
+    align: 'center',
+    render: (value: string) => parseFloat(value).toFixed(2),
+  },
+
+  {
+    title: 'Температура',
+    dataIndex: 'temperature',
+    key: 'temperature',
+    align: 'center',
+  },
+  {
+    title: 'Влажность',
+    dataIndex: 'humidity',
+    key: 'humidity',
+    align: 'center',
+  },
+  {
+    title: 'Кислород',
+    dataIndex: 'CO2',
+    key: 'CO2',
+    align: 'center',
+  },
+  {
+    title: 'Углекислый газ',
+    dataIndex: 'oxygen',
+    key: 'oxygen',
+    align: 'center',
+  },
+  {
+    title: 'Есть огонь?',
+    dataIndex: 'fire',
+    key: 'fire',
+    align: 'center',
+    render: (value: string) => (parseFloat(value) ? 'да' : 'нет'),
   },
 ];

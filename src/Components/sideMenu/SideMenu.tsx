@@ -6,7 +6,6 @@ import SensorDateDrawer from '../drawer/sensorDateDrawer/SensorDateDrawer';
 const SideMenu = () => {
   return (
     <Sider style={{ background: '#FDF0D5' }} width={50}>
-      {/* Menu не использовала, дополнительная возня со стилям, мне лень */}
       <Flex gap="middle" vertical>
         <GeneralInformationDrawer />
         <SensorDateDrawer />

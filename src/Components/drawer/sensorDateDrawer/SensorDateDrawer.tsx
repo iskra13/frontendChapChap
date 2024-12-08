@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { Button, Drawer, Table } from 'antd';
 import { TableOutlined } from '@ant-design/icons';
-import { columns, dataSource } from './SensorDateDrawer.data';
+import { columns } from './SensorDateDrawer.data';
+import { allCoordinates } from '../../coordinate/Coordinate.data';
+
+import { useSocketDataStore } from '../../../Store';
 
 const SensorDateDrawer = () => {
   const [isTableVisible, setIsTableVisible] = useState(false);
+  const { socketData } = useSocketDataStore((state) => state);
 
   return (
     <>
@@ -18,10 +22,10 @@ const SensorDateDrawer = () => {
         placement="right"
         onClose={() => setIsTableVisible(false)}
         open={isTableVisible}
-        width={600}
+        width={1050}
         style={{ background: '#669BBC' }}
       >
-        <Table dataSource={dataSource} columns={columns} />
+        <Table dataSource={socketData} columns={columns as any} />
       </Drawer>
     </>
   );

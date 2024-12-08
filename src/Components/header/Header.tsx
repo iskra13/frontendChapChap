@@ -5,7 +5,9 @@ const { Title } = Typography;
 const HeaderContent = () => {
   return (
     <Header style={{ background: '#FDF0D5' }}>
-      <Title style={{ textAlign: 'center' }}>Карта пожаров</Title>
+      <Title style={{ textAlign: 'center', marginTop: '7px', fontSize: '32px' }}>
+        Карта пожаров
+      </Title>
     </Header>
   );
 };
